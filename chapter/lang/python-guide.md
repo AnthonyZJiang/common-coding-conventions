@@ -13,8 +13,19 @@
  * Separate large numbers with underscores. Prefer `1_000_000` over `1000000`.
  * Use `_` for unused variables: `_, extension = 'foobar.txt'.split('.')`
  * constants are indicated by all uppercase names.
- * Create own types by assigning a base type to a name, e.g. `Volt = float`
+ * Create own types by assigning a base type to a name:
+```python
+# before python 3.10
+Volt = float
 
+# after python 3.10
+from typing import TypeAlias
+Volt: TypeAlias = float
+
+# after python 3.12
+type Volt = float
+```
+    
 
 
 #### Further down the Pythonic road
